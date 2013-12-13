@@ -4,7 +4,6 @@ import de.hsaugsburg.smas.node.SmasNode
 import de.hsaugsburg.smas.services.messages.RegisterService
 
 /**
- * Created with IntelliJ IDEA.
  * User: chris
  * Date: 12.12.13
  * Time: 01:00
