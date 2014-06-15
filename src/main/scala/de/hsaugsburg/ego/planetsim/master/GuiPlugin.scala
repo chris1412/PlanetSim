@@ -1,7 +1,7 @@
 package de.hsaugsburg.ego.planetsim.master
 
 import de.hsaugsburg.ego.planetsim.domain.{RenderObject, Planet, Star}
-import de.hsaugsburg.ego.planetsim.gui.{SimulationFrame, ControlFrame}
+import de.hsaugsburg.ego.planetsim.gui.{PlanetSimMainFrame, PlanetSimOptionFrame}
 import de.hsaugsburg.smas.plugin.base.SmasPlugin
 
 import scala.collection.mutable.ListBuffer
@@ -13,8 +13,8 @@ import scala.collection.mutable.ListBuffer
  */
 class GuiPlugin extends SmasPlugin {
 
-  val controlFrame = new ControlFrame(this)
-  val simulationFrame = new SimulationFrame(this)
+  val controlFrame = new PlanetSimOptionFrame(this)
+  val simulationFrame = new PlanetSimMainFrame(this)
 
   var roMap: Map[String, RenderObject] = Map()
 
@@ -39,9 +39,7 @@ class GuiPlugin extends SmasPlugin {
 
     simulationFrame.init
 
-    while(true) {
-
-      log.info("Tick!")
+    /*while(true) {
 
       roMap.values foreach {
         ro: RenderObject => {
@@ -51,15 +49,6 @@ class GuiPlugin extends SmasPlugin {
             case Planet => {
               var oldPos = ro.position
               ro.position = (oldPos._1 + ro.objectType.posScale, oldPos._2 + ro.objectType.posScale, oldPos._3 + ro.objectType.posScale)
-
-
-              var z = ro.sphereActor.GetPosition()
-
-              if(ro.id == "Merkur") {
-                log.info(ro.toString)
-                log.info("(%s, %s, %s)".format(z(0), z(1), z(2)))
-              }
-
             }
             case _ => { }
           }
@@ -68,9 +57,9 @@ class GuiPlugin extends SmasPlugin {
 
       simulationFrame.update
 
-      Thread.sleep(100)
+      Thread.sleep(500)
 
-    }
+    }*/
 
     log.info("Simulation MasterPlugin created!")
     true
@@ -100,5 +89,9 @@ object GuiPlugin {
     roLB += new RenderObject("Neptun",  Planet,   24624e3,  1.02e26,  (4.495e12,  0.0,  0.0), (0.0, 5.43e3,   0.0))
 
     roLB.toList
+  }
+
+  def randomSystem {
+
   }
 }
