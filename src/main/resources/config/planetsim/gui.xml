@@ -8,11 +8,15 @@
 
             <nodes>
                 <node>
-                    <class>de.hsaugsburg.ego.planetsim.master.MasterNode</class>
+                    <class>de.hsaugsburg.ego.planetsim.master.MasterGuiNode</class>
                     <plugins>
                         <plugin>
-                            <name>SimulationMasterPlugin</name>
+                            <name>MasterPlugin</name>
                             <class>de.hsaugsburg.ego.planetsim.master.MasterPlugin</class>
+                        </plugin>
+                        <plugin>
+                            <name>GuiPlugin</name>
+                            <class>de.hsaugsburg.ego.planetsim.master.GuiPlugin</class>
                         </plugin>
                     </plugins>
                 </node>

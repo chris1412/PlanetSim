@@ -1,7 +1,6 @@
 package de.hsaugsburg.ego.planetsim.master
 
 import de.hsaugsburg.smas.plugin.base.SmasPlugin
-import de.hsaugsburg.ego.planetsim.gui.PlanetarySimulation
 
 /**
  * User: chris
@@ -10,11 +9,13 @@ import de.hsaugsburg.ego.planetsim.gui.PlanetarySimulation
  */
 class MasterPlugin extends SmasPlugin {
 
-  val gui = new PlanetarySimulation()
-
   def onStart =
   {
-    gui.start
+    //gui.init
+
+    //gui.loadSolarSystem
+
+    //gui.render
 
     log.info("Simulation MasterPlugin created!")
     true

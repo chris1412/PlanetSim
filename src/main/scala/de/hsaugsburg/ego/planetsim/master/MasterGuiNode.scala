@@ -8,7 +8,7 @@ import de.hsaugsburg.smas.services.messages.RegisterService
  * Date: 12.12.13
  * Time: 01:00
  */
-class MasterNode extends SmasNode {
+class MasterGuiNode extends SmasNode {
   def onStart
   {
     log.info("manager: " + manager)
