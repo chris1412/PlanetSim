@@ -50,7 +50,7 @@
         <dependency>
             <groupId>vtk</groupId>
             <artifactId>vtk</artifactId>
-            <version>5.8.0</version>
+            <version></version>
         </dependency>
     </dependencies>
 

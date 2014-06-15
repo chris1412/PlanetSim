@@ -57,7 +57,7 @@ class SimulationFrame(val gui: GuiPlugin) extends Frame {
 
   def update {
     //renderer.Render()
-    //panel.GetRenderWindow().Render()
+    panel.Render()
   }
 
 
